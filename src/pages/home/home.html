@@ -1,14 +1,50 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding id="page2">
+  <ion-list id="home-list2">
+    <ion-searchbar placeholder="어디로 가실래용?" name="" id="home-search3"></ion-searchbar>
+    <ion-item-divider color="light" id="home-list-item-divider2">
+      100m 이내
+    </ion-item-divider>
+    <ion-item color="none" on-click="goToPage5()" id="home-list-item11">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        구킈닭갈비
+      </h2>
+    </ion-item>
+    <ion-item-divider color="light" id="home-list-item-divider1">
+      200m 이내
+    </ion-item-divider>
+    <ion-item color="none" id="home-list-item12">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        할배국봡
+      </h2>
+    </ion-item>
+    <ion-item color="none" id="home-list-item13">
+      <ion-thumbnail item-left>
+        <img />
+      </ion-thumbnail>
+      <h2>
+        로로코스트
+      </h2>
+    </ion-item>
+  </ion-list>
 </ion-content>

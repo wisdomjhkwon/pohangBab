@@ -4,10 +4,10 @@ import { Page5Page } from '../page5/page5';
 import { Page9Page } from '../page9/page9';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-page6',
+  templateUrl: 'page6.html'
 })
-export class HomePage {
+export class Page6Page {
 
   constructor(public navCtrl: NavController) {
   }

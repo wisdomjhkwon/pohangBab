@@ -1,16 +1,33 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Page6Page } from '../pages/page6/page6';
+import { BusMapPage } from '../pages/bus-map/bus-map';
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { Page5Page } from '../pages/page5/page5';
+import { UserInformationPage } from '../pages/user-information/user-information';
+import { Page8Page } from '../pages/page8/page8';
+import { Page9Page } from '../pages/page9/page9';
+import { Page10Page } from '../pages/page10/page10';
+
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    Page6Page,
+    BusMapPage,
+    TabsControllerPage,
+    Page5Page,
+    UserInformationPage,
+    Page8Page,
+    Page9Page,
+    Page10Page
   ],
   imports: [
     BrowserModule,
@@ -19,7 +36,15 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    Page6Page,
+    BusMapPage,
+    TabsControllerPage,
+    Page5Page,
+    UserInformationPage,
+    Page8Page,
+    Page9Page,
+    Page10Page
   ],
   providers: [
     StatusBar,
