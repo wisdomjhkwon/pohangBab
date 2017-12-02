@@ -26,5 +26,12 @@
 			</ion-list>
 		</ion-card-content>
 	</ion-card>
+
+	<ion-card *ngIf="userData">
+		<ion-card-content>
+			<p>Email: {{userData.email}}</p>
+			<p>data: </p>
+		</ion-card-content>
+	</ion-card>
 	<button class="bottom" on-click="goToSignup()" ion-button clear full><b>회원가입하기</b></button>
 </ion-content>
