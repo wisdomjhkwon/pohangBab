@@ -1,6 +1,9 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 468dc24d5017a0410177da72efdd7293c67eed8b
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -27,6 +30,10 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 import { storage } from 'firebase/app';
+
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthProvider } from '../providers/auth/auth';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
@@ -57,7 +64,8 @@ export const firebaseConfig = {
     HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -79,6 +87,7 @@ export const firebaseConfig = {
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Facebook,
+    AuthProvider
   ]
 })
 export class AppModule { }

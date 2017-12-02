@@ -16,7 +16,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { BusMapPage } from '../pages/bus-map/bus-map';
 
-
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   templateUrl: 'app.html',
@@ -24,9 +24,11 @@ import { BusMapPage } from '../pages/bus-map/bus-map';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
+  
   rootPage: any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth) {
+      
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -53,5 +55,11 @@ export class MyApp {
   } goToPage10(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(Page10Page);
+  }
+  logout(params){
+    this.auth.auth.signOut();
+    if (!params) params = {};
+    window.localStorage.removeItem('currentuser');
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
   }
 }

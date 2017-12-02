@@ -21,18 +21,16 @@
 		<ion-card-content>
 			<ion-list no-line>
 				<ion-item>
-          <ion-input type="text" placeholder="아이디"[(ngModel)]='ID'></ion-input>
-          
+          <ion-input type="text" placeholder="Email"[(ngModel)]='userEmail'></ion-input>
         </ion-item>
-        <button ion-button block outline color="primary" on-click="IDCheck()">중복검사</button>
 
 				<ion-item>
-					<ion-input type="password" placeholder="비밀번호"[(ngModel)]='PW'></ion-input>
+					<ion-input type="password" placeholder="Password"[(ngModel)]='userPassword'></ion-input>
         </ion-item>
         
-        <ion-item>
+        <!-- <ion-item>
 					<ion-input type="text" placeholder="이메일"[(ngModel)]='Email'></ion-input>
-				</ion-item>
+				</ion-item> -->
 				
 				<button ion-button block outline color="primary" on-click="Signup()">가입하기</button>
 			
