@@ -17,6 +17,7 @@ import { HomePage } from '../pages/home/home';
 import { BusMapPage } from '../pages/bus-map/bus-map';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+import { StationListPage } from '../pages/station-list/station-list';
 
 @Component({
   templateUrl: 'app.html',
@@ -25,7 +26,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
   
-  rootPage: any = HomePage;
+  rootPage: any = StationListPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth) {
       
