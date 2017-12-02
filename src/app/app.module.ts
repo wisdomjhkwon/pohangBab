@@ -15,6 +15,8 @@ import { Page10Page } from '../pages/page10/page10';
 
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { ReviewWritePage } from '../pages/review-write/review-write';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,6 +38,17 @@ export const firebaseConfig = {
   messagingSenderId: "458112688497"
 }
 
+/* 이거 지혜가 쓰던 디비임다.
+var firebaseConfig = {
+  apiKey: "AIzaSyCKoR1T5iGSdX-cwuq94l_NtHDIwemXRmw",
+  authDomain: "pohangbabreview.firebaseapp.com",
+  databaseURL: "https://pohangbabreview.firebaseio.com",
+  projectId: "pohangbabreview",
+  storageBucket: "pohangbabreview.appspot.com",
+  messagingSenderId: "831440344671"
+};
+*/
+
 @NgModule({
   declarations: [
     MyApp,
@@ -49,7 +62,8 @@ export const firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ReviewWritePage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +86,8 @@ export const firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ReviewWritePage
   ],
   providers: [
     StatusBar,
