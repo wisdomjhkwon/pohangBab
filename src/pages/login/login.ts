@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage} from 'ionic-angular';
-
+import { NavController } from 'ionic-angular';
 import {Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
 
 /**
