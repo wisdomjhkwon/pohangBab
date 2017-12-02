@@ -9,25 +9,28 @@ import { Page9Page } from '../pages/page9/page9';
 import { Page8Page } from '../pages/page8/page8';
 import { Page10Page } from '../pages/page10/page10';
 
+import { ReviewData } from'./providers/review-data';
 
 import { HomePage } from '../pages/home/home';
 
 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers: [ ReviewData ]
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
     rootPage:any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
     });
+    reviewData.load();
   }
   goToUserInformation(params){
     if (!params) params = {};

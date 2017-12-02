@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ReviewData } from '../../app/providers/review-data';
 
 @Component({
   selector: 'page-page9',
@@ -7,7 +8,12 @@ import { NavController } from 'ionic-angular';
 })
 export class Page9Page {
 
-  constructor(public navCtrl: NavController) {
+  reviews: Array<Object> = []
+  constructor(public navCtrl: NavController, public reviewData: ReviewData) {
+    reviewData.getReviews().then(theResult => {
+      this.reviews = theResult;
+    })
   }
-  
+
+
 }
