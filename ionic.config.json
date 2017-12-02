@@ -2,5 +2,7 @@
   "name": "pohangBab",
   "app_id": "091c4043",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

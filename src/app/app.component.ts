@@ -10,6 +10,7 @@ import { Page8Page } from '../pages/page8/page8';
 import { Page10Page } from '../pages/page10/page10';
 
 import { ReviewData } from'./providers/review-data';
+import {LoginPage} from '../pages/login/login';
 
 import { HomePage } from '../pages/home/home';
 
@@ -21,7 +22,7 @@ import { HomePage } from '../pages/home/home';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = HomePage;
+    rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData) {
     platform.ready().then(() => {
