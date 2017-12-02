@@ -11,18 +11,21 @@ import { LoginPage } from '../login/login';
 })
 export class HomePage {
 
+  userEmail: string=null;
+
   constructor(public navCtrl: NavController) {
     // window.localStorage.removeItem('currentuser');
     if (!this.isLoggedin()) {
       console.log('You are not logged in');
       this.navCtrl.push(LoginPage);
+      
     }
-
   }
 
   isLoggedin() {
     if (window.localStorage.getItem('currentuser')) {
       console.log(window.localStorage.getItem('currentuser'));
+      
       return true;
     }
   }

@@ -67,20 +67,20 @@ export class LoginPage {
         this.navCtrl.setRoot(HomePage);
       }, err => {
         let msg;
-        switch (err.code) {
-          case "auth/argument-error":
-            msg = "잘못된 형식";
-            break;
+        switch (err.message) {
+          // case "auth/argument-error":
+          //   msg = "잘못된 형식";
+          //   break;
 
-          case "auth/wrong-password":
+          case "The password is invalid or the user does not have a password.":
             msg = "잘못된 비밀번호";
             break;
 
-          case "auth/user-not-found":
+          case "There is no user record corresponding to this identifier. The user may have been deleted.":
             msg = "존재하지 않는 이메일";
             break;
 
-          case "auth/invalid-email":
+          case "The email address is badly formatted.":
             msg = "잘못된 이메일 형식";
             break;
         }

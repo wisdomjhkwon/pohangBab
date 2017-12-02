@@ -32,20 +32,20 @@ export class SignupPage {
         this.navCtrl.pop();
       }, err => {
         let msg;
-        switch (err.code) {
-          case "auth/argument-error":
-            msg = "잘못된 형식";
-            break;
+        switch (err.message) {
+          // case "auth/argument-error":
+          //   msg = "잘못된 형식";
+          //   break;
 
-          case "auth/weak-password":
+          case "Password should be at least 6 characters":
             msg = "비밀번호는 6자리 이상이여야 합니다"
             break;
 
-          case "auth/invalid-email":
+          case "The email address is badly formatted.":
             msg = "잘못된 이메일 형식";
             break;
 
-          case "auth/email-already-in-use":
+          case "The email address is already in use by another account.":
             msg = "이미 사용중인 이메일";
             break;
         }

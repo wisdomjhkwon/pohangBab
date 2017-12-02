@@ -6,7 +6,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'user-information.html'
 })
 export class UserInformationPage {
-
+  userEmail=window.localStorage.getItem('currentuser');//현재 아이디
   constructor(public navCtrl: NavController) {
   }
   
