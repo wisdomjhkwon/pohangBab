@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+// import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -21,7 +21,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {Facebook} from '@ionic-native/facebook';
 
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule, AngularFireDatabase} from 'angularfire2/database';
 
+export const firebaseConfig ={
+  apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
+  authDomain: "pohangbab.firebaseapp.com",
+  databaseURL: "https://pohangbab.firebaseio.com",
+  projectId: "pohangbab",
+  storageBucket: "pohangbab.appspot.com",
+  messagingSenderId: "458112688497"
+}
 
 @NgModule({
   declarations: [
@@ -40,8 +50,10 @@ import {Facebook} from '@ionic-native/facebook';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    IonicModule.forRoot(MyApp)
+    // HttpModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
