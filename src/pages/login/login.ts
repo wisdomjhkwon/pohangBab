@@ -3,6 +3,8 @@ import { IonicPage} from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 import {Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
 
+import {SignupPage} from '../signup/signup';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,7 +19,7 @@ import {Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
 })
 export class LoginPage {
   userData=null;
-  constructor(private facebook: Facebook) {
+  constructor(private facebook: Facebook,public navCtrl: NavController) {
     
   }
 
@@ -31,5 +33,10 @@ export class LoginPage {
         this.userData={email: profile['email'],first_name: profile['first_name'],picture: profile['picture_large']['data']['url'], username: profile['name']};
       })
     })
+  }
+
+  goToSignup(params){
+    if (!params) params = {};
+    this.navCtrl.push(SignupPage);
   }
 }

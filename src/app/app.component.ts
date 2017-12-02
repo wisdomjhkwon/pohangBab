@@ -11,6 +11,7 @@ import { Page10Page } from '../pages/page10/page10';
 
 import { ReviewData } from'./providers/review-data';
 import {LoginPage} from '../pages/login/login';
+import {SignupPage} from '../pages/signup/signup';
 
 import { HomePage } from '../pages/home/home';
 

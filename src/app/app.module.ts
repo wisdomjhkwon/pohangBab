@@ -14,11 +14,13 @@ import { Page9Page } from '../pages/page9/page9';
 import { Page10Page } from '../pages/page10/page10';
 
 import {LoginPage} from '../pages/login/login';
+import {SignupPage} from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {Facebook} from '@ionic-native/facebook';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import {Facebook} from '@ionic-native/facebook';
     Page8Page,
     Page9Page,
     Page10Page,
-    LoginPage
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import {Facebook} from '@ionic-native/facebook';
     Page8Page,
     Page9Page,
     Page10Page,
-    LoginPage
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
