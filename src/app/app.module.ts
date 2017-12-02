@@ -31,6 +31,7 @@ import { storage } from 'firebase/app';
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
+import { StationListPage } from '../pages/station-list/station-list';
 
 
 export const firebaseConfig = {
@@ -66,7 +67,8 @@ var firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage,
+    SignupPage, 
+    StationListPage,
     ReviewWritePage
   ],
   imports: [
@@ -90,7 +92,8 @@ var firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage,
+    SignupPage, 
+    StationListPage,
     ReviewWritePage
   ],
   providers: [
