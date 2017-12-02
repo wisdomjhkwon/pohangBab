@@ -14,6 +14,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 
 import { HomePage } from '../pages/home/home';
+import { BusMapPage } from '../pages/bus-map/bus-map';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 

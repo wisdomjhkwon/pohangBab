@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <title>new</title>
@@ -10,7 +11,7 @@
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
-  
+
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
 
@@ -26,6 +27,7 @@
   <link href="build/main.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -41,5 +43,9 @@
   <!-- The bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+  <!-- google maps script is loaded last as to not block rendering -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA54eEN0l-xdZlZ0RhsJ3pYZJEjSoVznyU"></script>
+
 </body>
+
 </html>
