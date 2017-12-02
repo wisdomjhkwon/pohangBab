@@ -15,7 +15,7 @@ import { SignupPage } from '../pages/signup/signup';
 
 import { HomePage } from '../pages/home/home';
 
-
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   templateUrl: 'app.html',
@@ -26,7 +26,7 @@ export class MyApp {
   
   rootPage: any = HomePage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth) {
       
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -56,6 +56,7 @@ export class MyApp {
     this.navCtrl.setRoot(Page10Page);
   }
   logout(params){
+    this.auth.auth.signOut();
     if (!params) params = {};
     window.localStorage.removeItem('currentuser');
     this.navCtrl.setRoot(this.navCtrl.getActive().component);

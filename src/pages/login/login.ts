@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
-import { NavController,AlertController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 
 import { SignupPage } from '../signup/signup';
@@ -32,10 +32,6 @@ export class LoginPage {
 
   }
 
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad LoginPage');
-  // }
-
   LoginWithFB() {
     this.facebook.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
       this.facebook.api('me?fields=id,name,email,first_name,picture.width(720).height(720).as(picture_large)', []).then(profile => {
@@ -45,7 +41,6 @@ export class LoginPage {
   }
 
   async login() {
-    var data = ({ email: this.userEmail, password: this.userPassword });
 
     if (this.userEmail != null && this.userPassword != null) {
       this.auth.auth.signInWithEmailAndPassword(this.userEmail, this.userPassword).then(res => {
@@ -62,12 +57,12 @@ export class LoginPage {
             msg = "잘못된 비밀번호";
             break;
 
-            case "auth/user-not-found":
-            msg = "존재하지 않는 유저";
+          case "auth/user-not-found":
+            msg = "존재하지 않는 이메일";
             break;
 
           case "auth/invalid-email":
-            msg = "잘못된 이메일";
+            msg = "잘못된 이메일 형식";
             break;
         }
         this.alertCtrl.create({
@@ -76,14 +71,13 @@ export class LoginPage {
           buttons: ['확인']
         }).present();
       });
-    }else{
+    } else {
       this.alertCtrl.create({
         title: 'error',
         subTitle: '이메일, 비밀번호를 입력하세요',
         buttons: ['확인']
       }).present();
     }
-
   }
 
 
