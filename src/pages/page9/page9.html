@@ -7,31 +7,27 @@
       reviewwwwww
     </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="add"></ion-icon>
+      <button ion-button icon-only (click)="clickAdd()">
+        <ion-icon name="add" ></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding id="page9">
-  <ion-card id="page9-card23" *ngFor="let review of reviews">
+  <ion-card id="page9-card23" *ngFor="let review of reviews | async">
     <ion-list>
-      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
-        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
-      </div>
+      
       <ion-item color="none" id="page9-list-item43">
         {{review.text}}
         <br>
-        <ion-icon name="heart" item-right></ion-icon>
-      </ion-item>
+        <ion-icon [name]="review.isHeart" item-right> </ion-icon>
+         </ion-item>
       <ion-item color="none" id="page9-list-item41">
-        <ion-avatar item-left>
-          <img/> 
-        </ion-avatar>
-        <h2>
-          {{review.name}}
-        </h2>
+        
+        <h4>
+          <b> {{review.name}} </b> 님이 작성하신 글입니다.
+        </h4>
       </ion-item>
     </ion-list>
   </ion-card>

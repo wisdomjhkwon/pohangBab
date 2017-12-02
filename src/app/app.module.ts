@@ -12,14 +12,26 @@ import { UserInformationPage } from '../pages/user-information/user-information'
 import { Page8Page } from '../pages/page8/page8';
 import { Page9Page } from '../pages/page9/page9';
 import { Page10Page } from '../pages/page10/page10';
-
-import {LoginPage} from '../pages/login/login';
+import { ReviewWritePage } from '../pages/review-write/review-write';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import {Facebook} from '@ionic-native/facebook';
+import { Facebook } from '@ionic-native/facebook';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
+var firebaseConfig = {
+  apiKey: "AIzaSyCKoR1T5iGSdX-cwuq94l_NtHDIwemXRmw",
+  authDomain: "pohangbabreview.firebaseapp.com",
+  databaseURL: "https://pohangbabreview.firebaseio.com",
+  projectId: "pohangbabreview",
+  storageBucket: "pohangbabreview.appspot.com",
+  messagingSenderId: "831440344671"
+};
 
 @NgModule({
   declarations: [
@@ -33,12 +45,15 @@ import {Facebook} from '@ionic-native/facebook';
     Page8Page,
     Page9Page,
     Page10Page,
-    LoginPage
+    LoginPage,
+    ReviewWritePage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig), 
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,7 +67,8 @@ import {Facebook} from '@ionic-native/facebook';
     Page8Page,
     Page9Page,
     Page10Page,
-    LoginPage
+    LoginPage,
+    ReviewWritePage
   ],
   providers: [
     StatusBar,
