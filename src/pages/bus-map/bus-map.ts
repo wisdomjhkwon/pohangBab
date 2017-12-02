@@ -1,25 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Page6Page } from '../page6/page6';
-import { Page5Page } from '../page5/page5';
-import { Page9Page } from '../page9/page9';
+
+declare var google;
 
 @Component({
   selector: 'page-bus-map',
   templateUrl: 'bus-map.html'
 })
+
 export class BusMapPage {
 
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
+
   constructor(public navCtrl: NavController) {
+
   }
-  goToPage6(params){
-    if (!params) params = {};
-    this.navCtrl.push(Page6Page);
-  }goToPage5(params){
-    if (!params) params = {};
-    this.navCtrl.push(Page5Page);
-  }goToPage9(params){
-    if (!params) params = {};
-    this.navCtrl.push(Page9Page);
+
+  ionViewDidEnter() {
+    this.loadMap();
+  }
+
+  loadMap() {
+
+    let latLng = new google.maps.LatLng(36.0877, 129.3964);
+
+    let mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+
+    
+
   }
 }

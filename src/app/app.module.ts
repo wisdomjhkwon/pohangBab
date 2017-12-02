@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// import { HttpModule } from '@angular/http';
+
+import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -13,18 +14,21 @@ import { Page8Page } from '../pages/page8/page8';
 import { Page9Page } from '../pages/page9/page9';
 import { Page10Page } from '../pages/page10/page10';
 
-import {LoginPage} from '../pages/login/login';
-import {SignupPage} from '../pages/signup/signup';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import {Facebook} from '@ionic-native/facebook';
+import { Facebook } from '@ionic-native/facebook';
 
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireDatabaseModule, AngularFireDatabase} from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { ConferenceData } from '../providers/conference-data';
+import { UserData } from '../providers/user-data';
+import { storage } from 'firebase/app';
 
-export const firebaseConfig ={
+export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
   authDomain: "pohangbab.firebaseapp.com",
   databaseURL: "https://pohangbab.firebaseio.com",
@@ -50,7 +54,7 @@ export const firebaseConfig ={
   ],
   imports: [
     BrowserModule,
-    // HttpModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
@@ -73,8 +77,8 @@ export const firebaseConfig ={
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Facebook
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    Facebook,
   ]
 })
-export class AppModule {}
+export class AppModule { }
