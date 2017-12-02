@@ -9,9 +9,9 @@ import { Page9Page } from '../pages/page9/page9';
 import { Page8Page } from '../pages/page8/page8';
 import { Page10Page } from '../pages/page10/page10';
 
-import { ReviewData } from'./providers/review-data';
-import {LoginPage} from '../pages/login/login';
-import {SignupPage} from '../pages/signup/signup';
+import { ReviewData } from './providers/review-data';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
 import { HomePage } from '../pages/home/home';
 
@@ -19,13 +19,15 @@ import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ ReviewData ]
+  providers: [ReviewData]
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = LoginPage;
+  
+  rootPage: any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData) {
+      
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -34,23 +36,28 @@ export class MyApp {
     });
     reviewData.load();
   }
-  goToUserInformation(params){
+  goToUserInformation(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(UserInformationPage);
-  }goToHome(params){
+  } goToHome(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(HomePage);
-  }goToPage5(params){
+  } goToPage5(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(Page5Page);
-  }goToPage9(params){
+  } goToPage9(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(Page9Page);
-  }goToPage8(params){
+  } goToPage8(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(Page8Page);
-  }goToPage10(params){
+  } goToPage10(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(Page10Page);
+  }
+  logout(params){
+    if (!params) params = {};
+    window.localStorage.removeItem('currentuser');
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
   }
 }

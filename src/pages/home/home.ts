@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { Page5Page } from '../page5/page5';
 import { Page9Page } from '../page9/page9';
 
+import { LoginPage } from '../login/login';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -10,11 +12,24 @@ import { Page9Page } from '../page9/page9';
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
+    // window.localStorage.removeItem('currentuser');
+    if (!this.isLoggedin()) {
+      console.log('You are not logged in');
+      this.navCtrl.push(LoginPage);
+    }
+
   }
-  goToPage5(params){
+
+  isLoggedin() {
+    if (window.localStorage.getItem('currentuser')) {
+      console.log(window.localStorage.getItem('currentuser'));
+      return true;
+    }
+  }
+  goToPage5(params) {
     if (!params) params = {};
     this.navCtrl.push(Page5Page);
-  }goToPage9(params){
+  } goToPage9(params) {
     if (!params) params = {};
     this.navCtrl.push(Page9Page);
   }
