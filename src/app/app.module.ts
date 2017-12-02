@@ -25,6 +25,10 @@ import { Facebook } from '@ionic-native/facebook';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { ConferenceData } from '../providers/conference-data';
+import { UserData } from '../providers/user-data';
+import { storage } from 'firebase/app';
+
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 
