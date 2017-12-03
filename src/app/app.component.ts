@@ -55,7 +55,7 @@ export class MyApp {
     this.navCtrl.setRoot(Page8Page);
   } goToPage10(params) {
     if (!params) params = {};
-    this.navCtrl.setRoot(Page10Page);
+    this.navCtrl.push(Page10Page);
   }
   logout(params){
     this.auth.auth.signOut();
