@@ -1,25 +1,36 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
-/**
- * Generated class for the Stat4Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+declare var google;
 
-@IonicPage()
 @Component({
   selector: 'page-stat4',
   templateUrl: 'stat4.html',
 })
 export class Stat4Page {
+  @ViewChild('map') mapElement: ElementRef;
+  map: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Stat4Page');
+  ionViewDidEnter() {
+    this.loadMap();
   }
 
+  loadMap() {
+    let latLng = new google.maps.LatLng(36.0786, 129.3923);
+
+    let mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+
+    
+
+  }
 }
