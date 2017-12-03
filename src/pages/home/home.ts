@@ -5,6 +5,9 @@ import { Page9Page } from '../page9/page9';
 
 import { LoginPage } from '../login/login';
 
+import {Geolocation} from '@ionic-native/geolocation';
+import { CurrentLoc } from '../../interfaces/current-loc';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,17 +16,27 @@ export class HomePage {
   userEmail: string = null;
   loader: LoadingController;
   refresher: Refresher;
+  currentLoc: CurrentLoc = { lat: 0, lon: 0 };
 
-  constructor(public navCtrl: NavController,
-    public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, 
+    public GeoLocation: Geolocation) {
     // window.localStorage.removeItem('currentuser');
     if (!this.isLoggedin()) {
       console.log('You are not logged in');
       this.navCtrl.push(LoginPage);
     }
 
+    GeoLocation.getCurrentPosition().then(pos => {
+      console.log('lat: ' + pos.coords.latitude
+      + ', lon: ' + pos.coords.longitude);
+      this.currentLoc.lat = pos.coords.latitude;
+      this.currentLoc.lon = pos.coords.longitude;
+      this.currentLoc.timestamp = pos.timestamp;
+      });
+    
+
     let loader = this.loadingCtrl.create({
-      content: "Loading location data...",
+      content: "Loading :)",
       duration: 2000
     });
 

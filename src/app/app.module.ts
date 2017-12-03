@@ -33,6 +33,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 import { StationListPage } from '../pages/station-list/station-list';
 
+import {Geolocation} from '@ionic-native/geolocation';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
@@ -99,6 +101,7 @@ var firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Facebook,
     AuthProvider
