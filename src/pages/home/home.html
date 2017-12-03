@@ -4,14 +4,20 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Home
+      My Location
     </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
-      </button>
+      <button ion-button (click)="pageRecall()">
+        <ion-icon name="refresh"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
+
+<ion-content>
+    <div style="width:100%; height:100%" #map="" id="map"></div>
+</ion-content>
+
+<!--
 <ion-content padding id="page2">
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
@@ -51,3 +57,4 @@
     </ion-item>
   </ion-list>
 </ion-content>
+-->
