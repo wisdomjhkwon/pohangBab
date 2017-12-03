@@ -5,6 +5,7 @@ import { ReviewWritePage } from '../review-write/review-write';
 
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
+
 @Component({
   selector: 'page-page9',
   templateUrl: 'page9.html'
