@@ -43,7 +43,17 @@ import {
   GoogleMaps,
 } from '@ionic-native/google-maps';
 import { StorePage1Page } from '../pages/store-page1/store-page1';
+import { StorePage2Page } from '../pages/store-page2/store-page2';
+import { StorePage3Page } from '../pages/store-page2/store-page2';
+import { StorePage4Page } from '../pages/store-page2/store-page2';
+import { StorePage5Page } from '../pages/store-page2/store-page2';
+import { StorePage6Page } from '../pages/store-page2/store-page2';
+import { StorePage7Page } from '../pages/store-page2/store-page2';
+import { StorePage8Page } from '../pages/store-page8/store-page8';
 import { StorePage9Page } from '../pages/store-page9/store-page9';
+import { StorePage10Page } from '../pages/store-page2/store-page2';
+import { StorePage11Page } from '../pages/store-page2/store-page2';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
@@ -87,7 +97,16 @@ var firebaseConfig = {
     Stat4Page,
     Stat5Page,
     StorePage1Page,
-    StorePage9Page
+    StorePage2Page,
+    StorePage3Page,
+    StorePage4Page,
+    StorePage5Page,
+    StorePage6Page,
+    StorePage7Page,
+    StorePage8Page,
+    StorePage9Page,
+    StorePage10Page,
+    StorePage11Page
   ],
   imports: [
     BrowserModule,
@@ -119,7 +138,16 @@ var firebaseConfig = {
     Stat4Page,
     Stat5Page,
     StorePage1Page,
-    StorePage9Page
+    StorePage2Page,
+    StorePage3Page,
+    StorePage4Page,
+    StorePage5Page,
+    StorePage6Page,
+    StorePage7Page,
+    StorePage8Page,
+    StorePage9Page,
+    StorePage10Page,
+    StorePage11Page
   ],
   providers: [
     Geolocation,
