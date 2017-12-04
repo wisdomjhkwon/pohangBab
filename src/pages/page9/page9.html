@@ -16,6 +16,7 @@
 
 <ion-content padding id="page9">
   <ion-card id="page9-card23" *ngFor="let review of reviews | async" >
+    {{$index}}
     <ion-list *ngIf="review.storeName == storeName">
       
       <ion-item color="none" id="page9-list-item43">
