@@ -32,7 +32,7 @@ export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
 
   
-  rootPage: any = HomePage;
+  rootPage: any = Page6Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth, public storeData: StoreData, private facebook: Facebook) {
 
