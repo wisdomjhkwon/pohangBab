@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      reviewwwwww
+      {{storeName}} Review
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="clickAdd()">
@@ -16,7 +16,7 @@
 
 <ion-content padding id="page9">
   <ion-card id="page9-card23" *ngFor="let review of reviews | async" >
-    <ion-list *ngIf="review.store == storeNum">
+    <ion-list *ngIf="review.store == storeName">
       
       <ion-item color="none" id="page9-list-item43">
         <!--{{arrData[2].$value}}-->
