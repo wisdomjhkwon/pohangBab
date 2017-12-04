@@ -99,7 +99,6 @@ export class LoginPage {
     }
   }
 
-
   goToSignup(params) {
     if (!params) params = {};
     this.navCtrl.push(SignupPage);

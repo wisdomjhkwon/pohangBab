@@ -28,6 +28,7 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
 
+  
   rootPage: any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth, private facebook: Facebook) {
