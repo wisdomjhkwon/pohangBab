@@ -17,6 +17,15 @@ import { StorePage8Page } from '../store-page8/store-page8';
 import { StorePage9Page } from '../store-page9/store-page9';
 import { StorePage10Page } from '../store-page10/store-page10';
 import { StorePage11Page } from '../store-page11/store-page11';
+import { StorePage12Page } from '../store-page12/store-page12';
+import { StorePage13Page } from '../store-page13/store-page13';
+import { StorePage14Page } from '../store-page14/store-page14';
+import { StorePage15Page } from '../store-page15/store-page15';
+import { StorePage16Page } from '../store-page16/store-page16';
+import { StorePage17Page } from '../store-page17/store-page17';
+import { StorePage18Page } from '../store-page18/store-page18';
+import { StorePage19Page } from '../store-page19/store-page19';
+import { StorePage20Page } from '../store-page20/store-page20';
 
 declare var google;
 
@@ -101,7 +110,7 @@ export class HomePage {
       this.addMarker(36.079668, 129.3972152, "<h4>서가앤쿡</h4>", StorePage9Page);  //서가앤쿡, 9
       this.addMarker(36.0812453, 129.4017762, "<h4>시골국밥</h4>", StorePage10Page); //시골국밥, 10
       this.addMarker(36.0859756, 129.3970781, "<h4>용강국밥</h4>", StorePage11Page); //용강국밥, 11
-      this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", storePage12Page); //이동근 선산곱창 막창, 12
+      this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", StorePage12Page); //이동근 선산곱창 막창, 12
       this.addMarker(36.081606, 129.3992085, "<h4>전주명가 콩나물국밥</h4>", StorePage13Page);  //전주명가 콩나물국밥, 13
       this.addMarker(36.08097, 129.3975353, "<h4>정용중화</h4>", StorePage14Page);   //정용중화, 14
       this.addMarker(36.0819914, 129.3959307, "<h4>쿠킹빌리지 양식당</h4>", StorePage15Page); //쿠킹빌리지 양식당, 15
