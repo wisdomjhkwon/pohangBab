@@ -92,9 +92,7 @@ export class Stat2Page {
       content: content
     });
 
-    google.maps.event.addListener(marker, 'dblclick', () => {
-      this.navCtrl.push(index);
-    });
+
 
     google.maps.event.addListener(marker, 'click', () => {
       infoWindow.open(this.map, marker);
@@ -127,6 +125,10 @@ export class Stat2Page {
         lng: lng
       },
       icon: image
+    });
+
+    google.maps.event.addListener(marker, 'dblclick', () => {
+      this.navCtrl.push(index);
     });
 
     this.addInfoWindow(marker, content, index);
