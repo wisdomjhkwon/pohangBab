@@ -17,7 +17,7 @@ export class Page5Page {
   storeName: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storeData: StoreData, public af: AngularFireDatabase) {
-    
+    /*
     let keyVal = navParams.get('key');
 
     console.log(keyVal);
@@ -28,7 +28,7 @@ export class Page5Page {
     storeData.getStore().then(theResult => {
       this.storeInfo = af.list(str);
     })
-    
+    */
   
     //console.log(this.storeInfo);
 

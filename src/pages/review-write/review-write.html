@@ -20,18 +20,14 @@
 
 <ion-content padding>
   <ion-list no-lines>
+    {{storeName}} 음식점의 리뷰를 작성해주세요! 
 
     <ion-item>
-      <ion-label floating>Title</ion-label>
-      <ion-input [(ngModel)]="title"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label floating>Review</ion-label>
+      <ion-label floating>리뷰를 입력하세요.</ion-label>
       <ion-textarea [(ngModel)]="text"></ion-textarea>
     </ion-item>
     <ion-item>
-        <ion-label>방문 again </ion-label>
+        <ion-label>다시 방문하고 싶으신가요? </ion-label>
         <ion-toggle [(ngModel)]="goAgain"> </ion-toggle>
     </ion-item>
 <!--

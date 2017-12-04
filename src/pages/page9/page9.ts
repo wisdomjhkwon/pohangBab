@@ -32,7 +32,7 @@ export class Page9Page {
   }
 
   clickAdd() {
-    this.navCtrl.push(ReviewWritePage);
+    this.navCtrl.push(ReviewWritePage, {storename: this.storeName});
   }
 
 }

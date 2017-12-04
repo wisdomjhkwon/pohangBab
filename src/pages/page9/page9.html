@@ -16,7 +16,7 @@
 
 <ion-content padding id="page9">
   <ion-card id="page9-card23" *ngFor="let review of reviews | async" >
-    <ion-list *ngIf="review.store == storeName">
+    <ion-list *ngIf="review.storeName == storeName">
       
       <ion-item color="none" id="page9-list-item43">
         <!--{{arrData[2].$value}}-->
@@ -27,7 +27,7 @@
       <ion-item color="none" id="page9-list-item41">
         
         <h4>
-          <b> {{review.name}} </b> 님이 작성하신 글입니다.
+          <b> {{review.writer}} </b> 님이 작성하신 글입니다.
         </h4>
       </ion-item>
     </ion-list>

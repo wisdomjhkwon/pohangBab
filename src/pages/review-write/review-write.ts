@@ -18,9 +18,11 @@ export class ReviewWritePage {
   reviews : FirebaseListObservable<any[]>;
   userEmail: string;
   userName: string;
-  
+  storeName: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public af: AngularFireDatabase) {
     this.reviews = af.list('/reviews');
+    this.storeName = navParams.get('storename');
   }
 
   ionViewDidLoad() {
@@ -41,7 +43,7 @@ export class ReviewWritePage {
     this.userName=this.userEmail.slice(0,locofat);
     console.log(this.userName);
 
-    this.reviews.push({ title: this.title, text: this.text, goAgain: this.goAgain, isHeart: this.isHeart });
+    this.reviews.push({ text: this.text, goAgain: this.goAgain, isHeart: this.isHeart, storeName: this.storeName, writer: this.userName });
     
     this.navCtrl.pop();
   }
