@@ -30,12 +30,13 @@ export class Page5Page {
     })
     
   
-    console.log(this.storeInfo);
+    //console.log(this.storeInfo);
 
+    console.log("------------");
     this.af.list('/음식점/9월애',{preserveSnapshot:true}).subscribe(snapshots=>{
           snapshots.forEach(snapshot=>{
             //console.log(snapshot.key,snapshot.val().영업시간); 
-            this.storeName = snapshot.val().이름;
+            this.storeName = snapshot.val();
             console.log(this.storeName);
           });
         })
@@ -43,6 +44,6 @@ export class Page5Page {
   }
   goToPage9(params){
     if (!params) params = {};
-    this.navCtrl.push(Page9Page);
+    this.navCtrl.push(Page9Page, {storename: this.storeName});
   }
 }

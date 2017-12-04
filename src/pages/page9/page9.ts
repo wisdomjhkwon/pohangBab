@@ -17,7 +17,7 @@ export class Page9Page {
   reviews: any;
   te: any;
   //heartIcon: string = "heart";
-  storeNum: any;
+  storeName: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public reviewData: ReviewData, public af: AngularFireDatabase) {
     reviewData.getReviews().then(theResult => {
@@ -25,7 +25,7 @@ export class Page9Page {
     });
 
     // store num param 에서 넘겨와야함
-      this.storeNum = "9월애";
+      this.storeName =navParams.get('storename');
 
 
     
