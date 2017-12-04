@@ -19,6 +19,7 @@ export class Page9Page {
   //heartIcon: string = "heart";
   storeName: any;
   num: boolean;
+  index: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public reviewData: ReviewData, public af: AngularFireDatabase) {
     reviewData.getReviews().then(theResult => {

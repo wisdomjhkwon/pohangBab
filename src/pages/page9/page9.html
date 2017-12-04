@@ -17,12 +17,12 @@
 <ion-content padding id="page9">
   <ion-card id="page9-card23" *ngFor="let review of reviews | async" >
     <ion-list *ngIf="review.storeName == storeName">
-      
+      {{$index}}
       <ion-item color="none" id="page9-list-item43">
         <!--{{arrData[2].$value}}-->
         {{review.text}}
         <br>
-        <ion-icon [name]="review.isHeart" item-right> </ion-icon>
+        <ion-icon [name]="review.isHeart"  item-right> </ion-icon>
          </ion-item>
       <ion-item color="none" id="page9-list-item41">
         
