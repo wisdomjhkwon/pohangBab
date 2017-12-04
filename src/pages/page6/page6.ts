@@ -13,7 +13,7 @@ export class Page6Page {
   }
   goToPage5(params){
     if (!params) params = {};
-    this.navCtrl.push(Page5Page);
+    this.navCtrl.push(Page5Page, {key: '-L-RZ1yQdozAR40qygft'});
 
   }goToPage9(params){
     if (!params) params = {};
