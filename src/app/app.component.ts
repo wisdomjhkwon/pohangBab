@@ -26,7 +26,7 @@ import { StationListPage } from '../pages/station-list/station-list';
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
   
-  rootPage: any = HomePage;
+  rootPage: any = StationListPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth) {
       
@@ -55,7 +55,7 @@ export class MyApp {
     this.navCtrl.setRoot(Page8Page);
   } goToPage10(params) {
     if (!params) params = {};
-    this.navCtrl.setRoot(Page10Page);
+    this.navCtrl.push(Page10Page);
   }
   logout(params){
     this.auth.auth.signOut();

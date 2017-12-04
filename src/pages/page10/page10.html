@@ -15,41 +15,38 @@
   <form id="page10-form11">
     <ion-item id="page10-input9">
       <ion-label></ion-label>
-      <ion-input type="text" placeholder="가게 이름을 입력하세요."></ion-input>
+      <ion-input [(ngModel)]="storeName" type="text" placeholder="가게 이름을 입력하세요." [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <h4 id="page10-heading8" style="color:#000000;">
       가게 정보
     </h4>
     <ion-item id="page10-input10">
       <ion-label></ion-label>
-      <ion-input type="text" placeholder="휴무일, 영업시간, 연락처를 입력하세요."></ion-input>
+      <ion-input [(ngModel)]="storeInfo" type="text" placeholder="휴무일, 영업시간, 연락처를 입력하세요." [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <h4 id="page10-heading7" style="color:#000000;">
       메뉴
     </h4>
     <ion-item id="page10-input8">
       <ion-label></ion-label>
-      <ion-input type="text" placeholder="메뉴 정보를 입력하세요."></ion-input>
+      <ion-input [(ngModel)]="storeMenu" type="text" placeholder="메뉴 정보를 입력하세요." [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <h4 id="page10-heading9" style="color:#000000;">
       가게 위치 설명
     </h4>
     <ion-item id="page10-input12">
       <ion-label></ion-label>
-      <ion-input type="text" placeholder="가게 주소를 입력해주세요!"></ion-input>
+      <ion-input [(ngModel)]="storeAddr" type="text" placeholder="가게 주소를 입력해주세요!" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <h4 id="page10-heading10" style="color:#000000;">
       해시태그
     </h4>
     <ion-item id="page10-input11">
       <ion-label></ion-label>
-      <ion-input type="text" placeholder="해시태그를 입력해 보세요! 예) #혼밥 #3만원대"></ion-input>
+      <ion-input [(ngModel)]="storeHash" type="text" placeholder="해시태그를 입력해 보세요! 예) #혼밥 #3만원대" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
-    <h4 id="page10-heading11" style="color:#000000;">
-      사진 등록하기
-    </h4>
   </form>
-  <button id="page10-button3" ion-button color="energized" block>
+  <button id="page10-button3" ion-button color="energized" block (click)="storeRequest()">
     해주세요!
   </button>
 </ion-content>

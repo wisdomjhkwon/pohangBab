@@ -25,15 +25,22 @@ import { Facebook } from '@ionic-native/facebook';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
-import { ConferenceData } from '../providers/conference-data';
-import { UserData } from '../providers/user-data';
-import { storage } from 'firebase/app';
+
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 import { StationListPage } from '../pages/station-list/station-list';
 
+<<<<<<< HEAD
 import {Geolocation} from '@ionic-native/geolocation';
+=======
+import { Stat1Page } from '../pages/stat1/stat1';
+import { Stat2Page } from '../pages/stat2/stat2';
+import { Stat3Page } from '../pages/stat3/stat3';
+import { Stat4Page } from '../pages/stat4/stat4';
+import { Stat5Page } from '../pages/stat5/stat5';
+import { GoogleMaps } from '@ionic-native/google-maps';
+>>>>>>> 83c0e7697ba3ba6f2540a48d83ee421c7651e503
 
 
 export const firebaseConfig = {
@@ -71,7 +78,12 @@ var firebaseConfig = {
     LoginPage,
     SignupPage, 
     StationListPage,
-    ReviewWritePage
+    ReviewWritePage,
+    Stat1Page,
+    Stat2Page,
+    Stat3Page,
+    Stat4Page,
+    Stat5Page
   ],
   imports: [
     BrowserModule,
@@ -96,7 +108,12 @@ var firebaseConfig = {
     LoginPage,
     SignupPage, 
     StationListPage,
-    ReviewWritePage
+    ReviewWritePage,
+    Stat1Page,
+    Stat2Page,
+    Stat3Page,
+    Stat4Page,
+    Stat5Page
   ],
   providers: [
     StatusBar,
@@ -104,7 +121,8 @@ var firebaseConfig = {
     Geolocation,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Facebook,
-    AuthProvider
+    AuthProvider,
+    GoogleMaps
   ]
 })
 export class AppModule { }
