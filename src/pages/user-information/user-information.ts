@@ -7,7 +7,12 @@ import { NavController } from 'ionic-angular';
 })
 export class UserInformationPage {
   userEmail=window.localStorage.getItem('currentuser');//현재 아이디
+  
+  userName: string=null;
   constructor(public navCtrl: NavController) {
+    var locofat=this.userEmail.indexOf('@');
+    this.userName=this.userEmail.slice(0,locofat);
+    console.log(this.userName);
   }
   
 }

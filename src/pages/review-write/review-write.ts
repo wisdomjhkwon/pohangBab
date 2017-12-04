@@ -16,6 +16,8 @@ export class ReviewWritePage {
   goAgain: any;
   isHeart: any;
   reviews : FirebaseListObservable<any[]>;
+  userEmail: string;
+  userName: string;
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public af: AngularFireDatabase) {
     this.reviews = af.list('/reviews');
@@ -31,6 +33,13 @@ export class ReviewWritePage {
       this.isHeart = "heart";
     }
     else this.isHeart = "heart-outline";
+
+    this.userEmail=window.localStorage.getItem('currentuser');//현재 아이디
+    console.log(this.userEmail);
+
+    var locofat=this.userEmail.indexOf('@');
+    this.userName=this.userEmail.slice(0,locofat);
+    console.log(this.userName);
 
     this.reviews.push({ title: this.title, text: this.text, goAgain: this.goAgain, isHeart: this.isHeart });
     

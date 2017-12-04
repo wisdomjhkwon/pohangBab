@@ -17,7 +17,7 @@
 				<ion-item>
 					<ion-input type="password" placeholder="Password" [(ngModel)]="userPassword"></ion-input>
 				</ion-item>
-				<a>Forgot your login detail? <b>Get help signing in</b></a>
+				
 				<button ion-button block outline color="light" (click)="login()">Log in</button>
 				<p>OR</p>
 				<button ion-button block color="facebook" (click)="LoginWithFB()">
@@ -27,11 +27,11 @@
 		</ion-card-content>
 	</ion-card>
 
-	<ion-card *ngIf="userData">
+	<!-- <ion-card *ngIf="userData">
 		<ion-card-content>
 			<p>Email: {{userData.email}}</p>
 			<p>data: </p>
 		</ion-card-content>
-	</ion-card>
+	</ion-card> -->
 	<button class="bottom" on-click="goToSignup()" ion-button clear full><b>회원가입하기</b></button>
 </ion-content>
