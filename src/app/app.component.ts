@@ -10,6 +10,8 @@ import { Page8Page } from '../pages/page8/page8';
 import { Page10Page } from '../pages/page10/page10';
 
 import { ReviewData } from './providers/review-data';
+import { StoreData } from './providers/store-data';
+
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 
@@ -18,17 +20,18 @@ import { BusMapPage } from '../pages/bus-map/bus-map';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import { StationListPage } from '../pages/station-list/station-list';
+import { Page6Page } from '../pages/page6/page6';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ReviewData]
+  providers: [ReviewData, StoreData]
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
   
-  rootPage: any = Page9Page;
+  rootPage: any = Page6Page;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, public storeData: StoreData, private auth: AngularFireAuth) {
       
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -37,7 +40,9 @@ export class MyApp {
       splashScreen.hide();
     });
     reviewData.load();
-  }
+    storeData.load();
+ 
+ }
   goToUserInformation(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(UserInformationPage);

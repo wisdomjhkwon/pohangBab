@@ -37,7 +37,7 @@ import { Stat3Page } from '../pages/stat3/stat3';
 import { Stat4Page } from '../pages/stat4/stat4';
 import { Stat5Page } from '../pages/stat5/stat5';
 import { GoogleMaps } from '@ionic-native/google-maps';
-import {Geolocation} from '@ionic-native/geolocation';
+import { Geolocation } from '@ionic-native/geolocation';
 
 
 export const firebaseConfig = {
