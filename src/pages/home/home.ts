@@ -17,6 +17,8 @@ export class HomePage {
   loader: LoadingController;
   refresher: Refresher;
   currentLoc: CurrentLoc = { lat: 0, lon: 0 };
+  x: number = 0;
+  y: number = 0;
 
   @ViewChild('map') mapElement: ElementRef;
   map: any;
@@ -43,7 +45,6 @@ export class HomePage {
     });
 
     loader.present();
-
   }
 
   isLoggedin() {
@@ -112,31 +113,53 @@ export class HomePage {
     });
   }
 
-  addMarker(){
-    
-     let marker = new google.maps.Marker({
-       map: this.map,
-       animation: google.maps.Animation.DROP,
-       position: this.map.getCenter()
-     });
-    
-     let content = "<h4>Information!</h4>";         
-    
-     this.addInfoWindow(marker, content);
-    
-   }
+  
+  addMarker() {
+    let marker = new google.maps.Marker({
+      map: this.map,
+      animation: google.maps.Animation.DROP,
+      position: this.map.getCenter()
+    });
 
-   addInfoWindow(marker, content){
-    
-     let infoWindow = new google.maps.InfoWindow({
-       content: content
-     });
-    
-     google.maps.event.addListener(marker, 'click', () => {
-       infoWindow.open(this.map, marker);
-     });
-    
-   }
+    let content = "<h4>Information!</h4>";
 
+    this.addInfoWindow(marker, content);
+  }
+
+
+  addInfoWindow(marker, content) {
+
+    let infoWindow = new google.maps.InfoWindow({
+      content: content
+    });
+
+    google.maps.event.addListener(marker, 'click', () => {
+      infoWindow.open(this.map, marker);
+    });
+
+  }
+
+  showMyLocation() {
+    this.GeoLocation.watchPosition().subscribe((position) => {
+      this.x = position.coords.longitude;
+      this.y = position.coords.latitude;
+
+      let latLng = new google.maps.LatLng(this.x, this.y);
+
+      let marker = new google.maps.Marker({
+        map: this.map,
+        animation: google.maps.Animation.DROP,
+        position: this.map.getCenter()
+      });
+
+      let content = "<h4>You are here</h4>";
+
+      this.addInfoWindow(marker, content);
+
+    }, (err) => {
+      console.log(err);
+    });
+  }
 
 }
+
