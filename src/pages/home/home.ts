@@ -99,26 +99,26 @@ export class HomePage {
 
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
 
-      this.addMarker(36.0805071, 129.394598, "<h4>9월애</h4>", StorePage1Page);  //9월애, 1
-      this.addMarker(36.0841261, 129.3974612, "<h4>교동짬뽕</h4>", StorePage2Page); //교동짬뽕, 2
-      this.addMarker(36.0787765, 129.4017, "<h4>구이촌</h4>", StorePage3Page);   //구이촌, 3
-      this.addMarker(36.0821756, 129.401773, "<h4>국수나무</h4>", StorePage4Page);  //국수나무, 4
-      this.addMarker(36.0810292, 129.3966427, "<h4>궁물촌</h4>", StorePage5Page); //궁물촌, 5
-      this.addMarker(36.0815812, 129.3960486, "<h4>논스탠다드</h4>", StorePage6Page); //논스탠다드, 6
-      this.addMarker(36.0805828, 129.4001778, "<h4>대원 도토리 수제비</h4>", StorePage7Page); //대원 도토리 수제비, 7
-      this.addMarker(36.0800696, 129.3978667, "<h4>라라코스트</h4>", StorePage8Page); //라라코스트, 8
-      this.addMarker(36.079668, 129.3972152, "<h4>서가앤쿡</h4>", StorePage9Page);  //서가앤쿡, 9
-      this.addMarker(36.0812453, 129.4017762, "<h4>시골국밥</h4>", StorePage10Page); //시골국밥, 10
-      this.addMarker(36.0859756, 129.3970781, "<h4>용강국밥</h4>", StorePage11Page); //용강국밥, 11
-      this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", StorePage12Page); //이동근 선산곱창 막창, 12
-      this.addMarker(36.081606, 129.3992085, "<h4>전주명가 콩나물국밥</h4>", StorePage13Page);  //전주명가 콩나물국밥, 13
-      this.addMarker(36.08097, 129.3975353, "<h4>정용중화</h4>", StorePage14Page);   //정용중화, 14
-      this.addMarker(36.0819914, 129.3959307, "<h4>쿠킹빌리지 양식당</h4>", StorePage15Page); //쿠킹빌리지 양식당, 15
-      this.addMarker(36.0836295, 129.3970606, "<h4>팔선</h4>", StorePage16Page); //팔선, 16
-      this.addMarker(36.0802828, 129.4017585, "<h4>한양곱창전골</h4>", StorePage17Page); //한양곱창전골, 17
-      this.addMarker(36.0856341, 129.3970144, "<h4>할매국밥</h4>", StorePage18Page); //할매국밥, 18
-      this.addMarker(36.0834491, 129.3892483, "<h4>호원</h4>", StorePage19Page); //호원, 19
-      this.addMarker(36.0767831, 129.3966629, "<h4>홍콩반점</h4>", StorePage20Page); //홍콩반점, 20
+      this.addMarker(36.0805071, 129.394598, "9월애", StorePage1Page);  //9월애, 1
+      this.addMarker(36.0841261, 129.3974612, "교동짬뽕", StorePage2Page); //교동짬뽕, 2
+      this.addMarker(36.0787765, 129.4017, "구이촌", StorePage3Page);   //구이촌, 3
+      this.addMarker(36.0821756, 129.401773, "국수나무", StorePage4Page);  //국수나무, 4
+      this.addMarker(36.0810292, 129.3966427, "궁물촌", StorePage5Page); //궁물촌, 5
+      this.addMarker(36.0815812, 129.3960486, "논스탠다드", StorePage6Page); //논스탠다드, 6
+      this.addMarker(36.0805828, 129.4001778, "대원 도토리 수제비", StorePage7Page); //대원 도토리 수제비, 7
+      this.addMarker(36.0800696, 129.3978667, "라라코스트", StorePage8Page); //라라코스트, 8
+      this.addMarker(36.079668, 129.3972152, "서가앤쿡", StorePage9Page);  //서가앤쿡, 9
+      this.addMarker(36.0812453, 129.4017762, "시골국밥", StorePage10Page); //시골국밥, 10
+      this.addMarker(36.0859756, 129.3970781, "용강국밥", StorePage11Page); //용강국밥, 11
+      this.addMarker(36.0805675, 129.3998909, "이동근 선산곱창 막창", StorePage12Page); //이동근 선산곱창 막창, 12
+      this.addMarker(36.081606, 129.3992085, "전주명가 콩나물국밥", StorePage13Page);  //전주명가 콩나물국밥, 13
+      this.addMarker(36.08097, 129.3975353, "정용중화", StorePage14Page);   //정용중화, 14
+      this.addMarker(36.0819914, 129.3959307, "쿠킹빌리지 양식당", StorePage15Page); //쿠킹빌리지 양식당, 15
+      this.addMarker(36.0836295, 129.3970606, "팔선", StorePage16Page); //팔선, 16
+      this.addMarker(36.0802828, 129.4017585, "한양곱창전골", StorePage17Page); //한양곱창전골, 17
+      this.addMarker(36.0856341, 129.3970144, "할매국밥", StorePage18Page); //할매국밥, 18
+      this.addMarker(36.0834491, 129.3892483, "호원", StorePage19Page); //호원, 19
+      this.addMarker(36.0767831, 129.3966629, "홍콩반점", StorePage20Page); //홍콩반점, 20
 
     }, (err) => {
       console.log(err);
@@ -138,10 +138,11 @@ export class HomePage {
       icon: image
     });
 
-    let content = name;
+    let content = '<h4>'+name+'</h4>';
+
 
     google.maps.event.addListener(marker, 'dblclick', () => {
-      this.navCtrl.push(store);
+      this.navCtrl.push(StorePage1Page, {storeName: name});
     });
 
     this.addInfoWindow(marker, content);

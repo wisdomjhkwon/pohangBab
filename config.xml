@@ -87,12 +87,12 @@
         <variable name="APP_ID" value="932073976944906" />
         <variable name="APP_NAME" value="Pohangbap-Login" />
     </plugin>
-    <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAaSKyxxI2ZfwscDau6mIwKVqBW2233EOM" />
-        <variable name="API_KEY_FOR_IOS" value="AIzaSyBSZjDqIiHWDtu6z_0day8LclfBWf1sfwY" />
-    </plugin>
     <plugin name="cordova-plugin-geolocation" spec="^3.0.0">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
     <allow-navigation href="http://172.17.219.49:8101" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAaSKyxxI2ZfwscDau6mIwKVqBW2233EOM" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyBSZjDqIiHWDtu6z_0day8LclfBWf1sfwY" />
+    </plugin>
 </widget>
