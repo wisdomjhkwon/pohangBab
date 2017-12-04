@@ -134,10 +134,13 @@ export class HomePage {
   addMarker(x,y,name) {
     var storeLatLng = new google.maps.LatLng(x,y);
 
+    var image = 'https://lh5.googleusercontent.com/Yk8Usoj1FPzbi_2lmrWktlTNPvGQjj7v9Sp8AFKiJMiK-wt8k9LP_RcPOzM-yZUop5S7TyjR3N1cwY1Tp-jt=w1920-h917';
+
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
-      position: storeLatLng
+      position: storeLatLng,
+      icon: image
     });
 
     let content = name;
@@ -163,13 +166,15 @@ export class HomePage {
     this.GeoLocation.watchPosition().subscribe((position) => {
       //this.x = position.coords.longitude;
       //this.y = position.coords.latitude;
-
       //let latLng = new google.maps.LatLng(this.x, this.y);
+
+      var image = 'https://lh4.googleusercontent.com/lNBAcWnam6d6m6tMJsVuSVa1TgoqUcRsThNqdmfMHUDrdrSflYMM81Biu50sNlqi4lG9wctEmW8wEkYZdleD=w1920-h917';
 
       let marker = new google.maps.Marker({
         map: this.map,
         animation: google.maps.Animation.DROP,
-        position: this.map.getCenter()
+        position: this.map.getCenter(),
+        icon: image
       });
 
       let content = "<h4>You are here</h4>";
