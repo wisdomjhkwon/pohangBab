@@ -36,9 +36,13 @@ import { Stat2Page } from '../pages/stat2/stat2';
 import { Stat3Page } from '../pages/stat3/stat3';
 import { Stat4Page } from '../pages/stat4/stat4';
 import { Stat5Page } from '../pages/stat5/stat5';
-import { GoogleMaps } from '@ionic-native/google-maps';
-import {Geolocation} from '@ionic-native/geolocation';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
+import {
+  GoogleMaps,
+} from '@ionic-native/google-maps';
+import { StorePage1Page } from '../pages/store-page1/store-page1';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
@@ -73,14 +77,15 @@ var firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage, 
+    SignupPage,
     StationListPage,
     ReviewWritePage,
     Stat1Page,
     Stat2Page,
     Stat3Page,
     Stat4Page,
-    Stat5Page
+    Stat5Page,
+    StorePage1Page
   ],
   imports: [
     BrowserModule,
@@ -103,14 +108,15 @@ var firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage, 
+    SignupPage,
     StationListPage,
     ReviewWritePage,
     Stat1Page,
     Stat2Page,
     Stat3Page,
     Stat4Page,
-    Stat5Page
+    Stat5Page,
+    StorePage1Page
   ],
   providers: [
     Geolocation,
@@ -119,7 +125,8 @@ var firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Facebook,
     AuthProvider,
-    GoogleMaps
+    GoogleMaps,
+
   ]
 })
 export class AppModule { }

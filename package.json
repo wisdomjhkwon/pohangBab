@@ -34,6 +34,7 @@
     "cordova-android": "^6.3.0",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-facebook4": "^1.9.1",
+    "cordova-plugin-geolocation": "^3.0.0",
     "cordova-plugin-googlemaps": "^2.1.1",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-splashscreen": "^4.0.3",
@@ -69,6 +70,9 @@
       "cordova-plugin-googlemaps": {
         "API_KEY_FOR_ANDROID": "AIzaSyAaSKyxxI2ZfwscDau6mIwKVqBW2233EOM",
         "API_KEY_FOR_IOS": "AIzaSyBSZjDqIiHWDtu6z_0day8LclfBWf1sfwY"
+      },
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       }
     },
     "platforms": [
