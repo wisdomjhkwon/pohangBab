@@ -88,9 +88,9 @@ export class Stat1Page {
   }
 
   addInfoWindow(marker, content, index) {
-    content = '<h4>'+content+'</h4>';
+    var content1 = '<h4>'+content+'</h4>';
     let infoWindow = new google.maps.InfoWindow({
-      content: content
+      content: content1
       
     });
 
