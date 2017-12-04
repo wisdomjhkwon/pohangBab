@@ -50,7 +50,7 @@ export class LoginPage {
         window.localStorage.setItem('currentuser', this.userEmail);
         this.navCtrl.setRoot(HomePage);
       }).catch(ferr => {
-        alert("login error")
+        // alert("login error")
       })
 
     }).catch(err => {

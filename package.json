@@ -65,7 +65,7 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-facebook4": {
-        "APP_ID": "932073976944906",
+        "APP_ID": "932073976944906--variable",
         "APP_NAME": "Pohangbap-Login"
       },
       "cordova-plugin-googlemaps": {
