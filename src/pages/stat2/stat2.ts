@@ -11,6 +11,15 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { StorePage1Page } from '../store-page1/store-page1';
+import { StorePage13Page } from '../store-page13/store-page13';
+import { StorePage12Page } from '../store-page12/store-page12';
+import { StorePage14Page } from '../store-page14/store-page14';
+import { StorePage15Page } from '../store-page15/store-page15';
+import { StorePage16Page } from '../store-page16/store-page16';
+import { StorePage17Page } from '../store-page17/store-page17';
+import { StorePage18Page } from '../store-page18/store-page18';
+import { StorePage19Page } from '../store-page19/store-page19';
+import { StorePage20Page } from '../store-page20/store-page20';
 
 declare var google;
 
@@ -43,15 +52,15 @@ export class Stat2Page {
     this.addMarker(36.079668, 129.3972152, "<h4>서가앤쿡</h4>", StorePage1Page);  //서가앤쿡
     this.addMarker(36.0812453, 129.4017762, "<h4>시골국밥</h4>", StorePage1Page); //시골국밥
     this.addMarker(36.0859756, 129.3970781, "<h4>용강국밥</h4>", StorePage1Page); //용강국밥
-    this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", StorePage1Page); //이동근 선산곱창 막창
-    this.addMarker(36.081606, 129.3992085, "<h4>전주명가 콩나물국밥</h4>", StorePage1Page);  //전주명가 콩나물국밥
-    this.addMarker(36.08097, 129.3975353, "<h4>정용중화</h4>", StorePage1Page);   //정용중화
-    this.addMarker(36.0819914, 129.3959307, "<h4>쿠킹빌리지 양식당</h4>", StorePage1Page); //쿠킹빌리지 양식당
-    this.addMarker(36.0836295, 129.3970606, "<h4>팔선</h4>", StorePage1Page); //팔선
-    this.addMarker(36.0802828, 129.4017585, "<h4>한양곱창전골</h4>", StorePage1Page); //한양곱창전골
-    this.addMarker(36.0856341, 129.3970144, "<h4>할매국밥</h4>", StorePage1Page); //할매국밥
-    this.addMarker(36.0834491, 129.3892483, "<h4>호원</h4>", StorePage1Page); //호원
-    this.addMarker(36.0767831, 129.3966629, "<h4>홍콩반점</h4>", StorePage1Page); //홍콩반점
+    this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", StorePage12Page); //이동근 선산곱창 막창
+    this.addMarker(36.081606, 129.3992085, "<h4>전주명가 콩나물국밥</h4>", StorePage13Page);  //전주명가 콩나물국밥
+    this.addMarker(36.08097, 129.3975353, "<h4>정용중화</h4>", StorePage14Page);   //정용중화
+    this.addMarker(36.0819914, 129.3959307, "<h4>쿠킹빌리지 양식당</h4>", StorePage15Page); //쿠킹빌리지 양식당
+    this.addMarker(36.0836295, 129.3970606, "<h4>팔선</h4>", StorePage16Page); //팔선
+    this.addMarker(36.0802828, 129.4017585, "<h4>한양곱창전골</h4>", StorePage17Page); //한양곱창전골
+    this.addMarker(36.0856341, 129.3970144, "<h4>할매국밥</h4>", StorePage18Page); //할매국밥
+    this.addMarker(36.0834491, 129.3892483, "<h4>호원</h4>", StorePage19Page); //호원
+    this.addMarker(36.0767831, 129.3966629, "<h4>홍콩반점</h4>", StorePage20Page); //홍콩반점
   }
 
   loadMap() {
@@ -66,10 +75,14 @@ export class Stat2Page {
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
   }
 
-  addInfoWindow(marker, content) {
+  addInfoWindow(marker, content, index) {
 
     let infoWindow = new google.maps.InfoWindow({
       content: content
+    });
+
+    google.maps.event.addListener(marker, 'dblclick', () => {
+      this.navCtrl.push(index);
     });
 
     google.maps.event.addListener(marker, 'click', () => {
@@ -79,6 +92,7 @@ export class Stat2Page {
   }
 
   addCenterMarker() {
+    let index = null;
     var image = 'https://lh6.googleusercontent.com/6FEX2UWkE89jTqjYZDNnV1-tTHT5PGlpFTE4-a_-XQVo_7x0HS0Z-6mloUenlbLSPK9qg5X3XxXEBK3p4-XK=w1920-h917';
     let marker = new google.maps.Marker({
       map: this.map,
@@ -89,7 +103,7 @@ export class Stat2Page {
 
     let content = "<h4>하나로</h4>";
 
-    this.addInfoWindow(marker, content);
+    this.addInfoWindow(marker, content, index);
   }
 
   addMarker(lat, lng, content, index){
@@ -104,9 +118,6 @@ export class Stat2Page {
       icon: image
     });
 
-    google.maps.event.addListener(marker, 'dblclick', () => {
-      this.navCtrl.push(index);
-    });
-    this.addInfoWindow(marker, content);
+    this.addInfoWindow(marker, content, index);
   }
 }
