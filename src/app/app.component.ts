@@ -21,6 +21,8 @@ import { BusMapPage } from '../pages/bus-map/bus-map';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { StationListPage } from '../pages/station-list/station-list';
 import { Page6Page } from '../pages/page6/page6';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+
 
 @Component({
   templateUrl: 'app.html',
@@ -28,11 +30,12 @@ import { Page6Page } from '../pages/page6/page6';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-  
-  rootPage: any = Page6Page;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, public storeData: StoreData, private auth: AngularFireAuth) {
-      
+  
+  rootPage: any = HomePage;
+
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth, public storeData: StoreData, private facebook: Facebook) {
+
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -62,8 +65,9 @@ export class MyApp {
     if (!params) params = {};
     this.navCtrl.push(Page10Page);
   }
-  logout(params){
+  logout(params) {
     this.auth.auth.signOut();
+    this.facebook.logout();
     if (!params) params = {};
     window.localStorage.removeItem('currentuser');
     this.navCtrl.setRoot(this.navCtrl.getActive().component);

@@ -40,6 +40,10 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 
 
+
+import { StorePage1Page } from '../pages/store-page1/store-page1';
+import { StorePage9Page } from '../pages/store-page9/store-page9';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
   authDomain: "pohangbab.firebaseapp.com",
@@ -73,14 +77,16 @@ var firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage, 
+    SignupPage,
     StationListPage,
     ReviewWritePage,
     Stat1Page,
     Stat2Page,
     Stat3Page,
     Stat4Page,
-    Stat5Page
+    Stat5Page,
+    StorePage1Page,
+    StorePage9Page
   ],
   imports: [
     BrowserModule,
@@ -103,14 +109,16 @@ var firebaseConfig = {
     Page9Page,
     Page10Page,
     LoginPage,
-    SignupPage, 
+    SignupPage,
     StationListPage,
     ReviewWritePage,
     Stat1Page,
     Stat2Page,
     Stat3Page,
     Stat4Page,
-    Stat5Page
+    Stat5Page,
+    StorePage1Page,
+    StorePage9Page
   ],
   providers: [
     Geolocation,
@@ -119,7 +127,7 @@ var firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Facebook,
     AuthProvider,
-    GoogleMaps
+    GoogleMaps,
   ]
 })
 export class AppModule { }
