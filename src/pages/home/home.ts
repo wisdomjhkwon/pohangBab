@@ -27,6 +27,11 @@ import { StorePage18Page } from '../store-page18/store-page18';
 import { StorePage19Page } from '../store-page19/store-page19';
 import { StorePage20Page } from '../store-page20/store-page20';
 
+import { AngularFireDatabase } from 'angularfire2/database';
+import { ReviewWritePage } from '../review-write/review-write';
+import { Page9Page } from '../page9/page9';
+
+
 declare var google;
 
 @Component({
@@ -44,8 +49,13 @@ export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
 
+  storeName: any;
+  Data: Map<any, any>;
+  menu: any;
+
+
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController,
-    public GeoLocation: Geolocation) {
+    public GeoLocation: Geolocation, public af: AngularFireDatabase) {
     // window.localStorage.removeItem('currentuser');
     if (!this.isLoggedin()) {
       console.log('You are not logged in');
@@ -142,7 +152,25 @@ export class HomePage {
 
 
     google.maps.event.addListener(marker, 'dblclick', () => {
-      this.navCtrl.push(StorePage1Page, {storeName: name});
+      
+
+     var myMap = new Map();
+      this.af.list('/음식점/'+name, { preserveSnapshot: true }).subscribe(snapshots=> {
+          snapshots.forEach(snapshot => {
+            myMap.set(snapshot.key, snapshot.val())
+            this.Data = myMap;
+            if(this.Data.get("메뉴")) {
+              console.log(this.Data.get("메뉴"));
+              this.menu=this.Data.get("메뉴");
+            }
+            console.log(this.menu);
+          })
+        })
+
+        setTimeout(() => {//여기서 가게 디테일페이지로 넘어감
+          this.navCtrl.push(Page9Page, {storename: name, menu: this.menu});
+        }, 600);
+      
     });
 
     this.addInfoWindow(marker, content);

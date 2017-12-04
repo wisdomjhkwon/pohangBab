@@ -1,8 +1,8 @@
-<ion-menu [content]="mainContent">
+<ion-menu  [content]="mainContent">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-title>
-        Menu
+        포항세끼
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -15,7 +15,7 @@
         <!-- <h2>
           불주먹
         </h2> -->
-       User Infomation
+       사용자 정보
       </ion-item>
 
       <button ion-button block outline color="light" menuClose="" on-click="logout()">Log out</button>
@@ -23,20 +23,16 @@
     </ion-list>
     <ion-list id="menu-list4">
       <ion-item color="none" menuClose="" on-click="goToHome()" id="menu-list-item24">
-        Home
-      </ion-item>
-      <ion-item color="none" menuClose="" on-click="goToPage8()" id="menu-list-item25">
-        방문한 가게
-      </ion-item>
-      <ion-item color="none" menuClose="" on-click="goToPage10()" id="menu-list-item26">
-        가게 등록 요청
-      </ion-item>
-      <ion-item color="none" menuClose="" on-click="goToPage9()" id="menu-list-item26">
-        page9
+        내 주변 맛집 찾기!
       </ion-item>
       <ion-item color="none" menuClose="" on-click="goToPageStationList()" id="menu-list-item26">
-        버스 정류장
+          버스 정류장 주변 맛집 찾기!
+        </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToPage10()" id="menu-list-item26">
+        가게 등록 요청하기!
       </ion-item>
+      
+      
     </ion-list>
   </ion-content>
 </ion-menu>

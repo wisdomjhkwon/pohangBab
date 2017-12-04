@@ -6,53 +6,18 @@
     <ion-title>
       {{storeName}}
     </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="heart-outline"></ion-icon>
-      </button>
-    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page5">
-  <div>
-     </div>
-  <h3 id="page5-heading4" style="color:#000000;">
-    Store Info
+<ion-content padding id="page5" *ngFor="let info of infos | async">
+<p>.</p>
+<p>.</p>.<p>.</p>.<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+  <h3 *ngIf="info.storeName == storeName">
+    {{info.storeMenu}}
   </h3>
-  <div id="page5-markdown4" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      일요일은 쉽니다.
-      <br /> Tel: 054-123-1682
-    </p>
-  </div>
-  <h3 id="page5-heading2" style="color:#000000;">
-    Menu
-  </h3>
-  <div id="page5-markdown2" class="show-list-numbers-and-dots">
-    <ul>
-      <li>
-        닭갈비 학생할인 5000원
-      </li>
-      <li>
-        막국수 7000원
-      </li>
-      <li>
-        비빔막국수 8000원
-      </li>
-      <li>
-        사리 추가 2000원
-      </li>
-    </ul>
-  </div>
-  <h3 id="page5-heading3" style="color:#000000;">
-    Hashtags
-  </h3>
-  <div id="page5-markdown3" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      #혜자 #존맛탱 #단체
-    </p>
-  </div>
-  <button id="page5-button2" ion-button color="energized" block style="border-radius:4px 4px 4px 4px;" on-click="goToPage9()">
+
+  <button ion-button color="energized" on-click="goToPage9()">
     사람들의 생각 읽기
   </button>
+
 </ion-content>
