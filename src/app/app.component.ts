@@ -64,6 +64,9 @@ export class MyApp {
   } goToPage10(params) {
     if (!params) params = {};
     this.navCtrl.push(Page10Page);
+  } goToPageStationList(params) {
+    if (!params) params = {};
+    this.navCtrl.push(StationListPage);
   }
   logout(params) {
     this.auth.auth.signOut();
