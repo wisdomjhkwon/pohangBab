@@ -59,6 +59,7 @@ import { StorePage15Page } from '../pages/store-page15/store-page15';
 import { StorePage16Page } from '../pages/store-page16/store-page16';
 import { StorePage17Page } from '../pages/store-page17/store-page17';
 import { StorePage18Page } from '../pages/store-page18/store-page18';
+import { StorePage19Page } from '../pages/store-page19/store-page19';
 import { StorePage20Page } from '../pages/store-page20/store-page20';
 
 
@@ -122,7 +123,7 @@ var firebaseConfig = {
     StorePage16Page,
     StorePage17Page,
     StorePage18Page,
-    StorePage18Page,
+    StorePage19Page,
     StorePage20Page,
     
   ],
@@ -173,7 +174,7 @@ var firebaseConfig = {
     StorePage16Page,
     StorePage17Page,
     StorePage18Page,
-    StorePage18Page,
+    StorePage19Page,
     StorePage20Page,
 
   ],
