@@ -29,7 +29,7 @@ export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
 
   
-  rootPage: any = HomePage;
+  rootPage: any = StationListPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth, private facebook: Facebook) {
 
