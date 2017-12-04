@@ -6,6 +6,7 @@ import { LoginPage } from '../login/login';
 import { Geolocation } from '@ionic-native/geolocation';
 import { CurrentLoc } from '../../interfaces/current-loc';
 
+import { StorePage1Page } from '../store-page1/store-page1';
 import { StorePage2Page } from '../store-page2/store-page2';
 import { StorePage3Page } from '../store-page3/store-page3';
 import { StorePage4Page } from '../store-page4/store-page4';
@@ -100,7 +101,7 @@ export class HomePage {
       this.addMarker(36.079668, 129.3972152, "<h4>서가앤쿡</h4>", StorePage9Page);  //서가앤쿡, 9
       this.addMarker(36.0812453, 129.4017762, "<h4>시골국밥</h4>", StorePage10Page); //시골국밥, 10
       this.addMarker(36.0859756, 129.3970781, "<h4>용강국밥</h4>", StorePage11Page); //용강국밥, 11
-      this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", StorePage12Page); //이동근 선산곱창 막창, 12
+      this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", storePage12Page); //이동근 선산곱창 막창, 12
       this.addMarker(36.081606, 129.3992085, "<h4>전주명가 콩나물국밥</h4>", StorePage13Page);  //전주명가 콩나물국밥, 13
       this.addMarker(36.08097, 129.3975353, "<h4>정용중화</h4>", StorePage14Page);   //정용중화, 14
       this.addMarker(36.0819914, 129.3959307, "<h4>쿠킹빌리지 양식당</h4>", StorePage15Page); //쿠킹빌리지 양식당, 15

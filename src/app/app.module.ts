@@ -43,15 +43,15 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { StorePage1Page } from '../pages/store-page1/store-page1';
 import { StorePage2Page } from '../pages/store-page2/store-page2';
-import { StorePage3Page } from '../pages/store-page2/store-page2';
-import { StorePage4Page } from '../pages/store-page2/store-page2';
-import { StorePage5Page } from '../pages/store-page2/store-page2';
-import { StorePage6Page } from '../pages/store-page2/store-page2';
-import { StorePage7Page } from '../pages/store-page2/store-page2';
+import { StorePage3Page } from '../pages/store-page3/store-page3';
+import { StorePage4Page } from '../pages/store-page4/store-page4';
+import { StorePage5Page } from '../pages/store-page5/store-page5';
+import { StorePage6Page } from '../pages/store-page6/store-page6';
+import { StorePage7Page } from '../pages/store-page7/store-page7';
 import { StorePage8Page } from '../pages/store-page8/store-page8';
 import { StorePage9Page } from '../pages/store-page9/store-page9';
-import { StorePage10Page } from '../pages/store-page2/store-page2';
-import { StorePage11Page } from '../pages/store-page2/store-page2';
+import { StorePage10Page } from '../pages/store-page10/store-page10';
+import { StorePage11Page } from '../pages/store-page11/store-page11';
 
 
 export const firebaseConfig = {
