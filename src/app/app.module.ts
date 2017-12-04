@@ -42,6 +42,13 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 
 import { StorePage1Page } from '../pages/store-page1/store-page1';
+import { StorePage2Page } from '../pages/store-page2/store-page2';
+import { StorePage3Page } from '../pages/store-page2/store-page2';
+import { StorePage4Page } from '../pages/store-page2/store-page2';
+import { StorePage5Page } from '../pages/store-page2/store-page2';
+import { StorePage6Page } from '../pages/store-page2/store-page2';
+import { StorePage7Page } from '../pages/store-page2/store-page2';
+import { StorePage8Page } from '../pages/store-page8/store-page8';
 import { StorePage9Page } from '../pages/store-page9/store-page9';
 import { StorePage13Page } from '../pages/store-page13/store-page13';
 import { StorePage12Page } from '../pages/store-page12/store-page12';
@@ -51,6 +58,9 @@ import { StorePage16Page } from '../pages/store-page16/store-page16';
 import { StorePage17Page } from '../pages/store-page17/store-page17';
 import { StorePage18Page } from '../pages/store-page18/store-page18';
 import { StorePage20Page } from '../pages/store-page20/store-page20';
+import { StorePage10Page } from '../pages/store-page2/store-page2';
+import { StorePage11Page } from '../pages/store-page2/store-page2';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
@@ -103,8 +113,18 @@ var firebaseConfig = {
     StorePage17Page,
     StorePage18Page,
     StorePage18Page,
-    StorePage20Page
+    StorePage20Page,
     
+    StorePage2Page,
+    StorePage3Page,
+    StorePage4Page,
+    StorePage5Page,
+    StorePage6Page,
+    StorePage7Page,
+    StorePage8Page,
+    StorePage9Page,
+    StorePage10Page,
+    StorePage11Page
   ],
   imports: [
     BrowserModule,
@@ -145,8 +165,18 @@ var firebaseConfig = {
     StorePage17Page,
     StorePage18Page,
     StorePage18Page,
-    StorePage20Page
+    StorePage20Page,
     
+    StorePage2Page,
+    StorePage3Page,
+    StorePage4Page,
+    StorePage5Page,
+    StorePage6Page,
+    StorePage7Page,
+    StorePage8Page,
+    StorePage9Page,
+    StorePage10Page,
+    StorePage11Page
   ],
   providers: [
     Geolocation,
