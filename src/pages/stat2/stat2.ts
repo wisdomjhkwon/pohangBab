@@ -76,64 +76,63 @@ export class Stat2Page {
   }
 
   loadMap() {
-
-    let latLng = new google.maps.LatLng(36.081789, 129.398608);
-
-    let mapOptions = {
-      center: latLng,
-      zoom: 16,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+    
+        let latLng = new google.maps.LatLng(36.081789, 129.398608);
+    
+        let mapOptions = {
+          center: latLng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+      }
+    
+      addInfoWindow(marker, content, index) {
+        var content1 = '<h4>'+content+'</h4>';
+        let infoWindow = new google.maps.InfoWindow({
+          content: content1
+          
+        });
+    
+        google.maps.event.addListener(marker, 'dblclick', () => {
+          setTimeout(() => {//여기서 가게 디테일페이지로 넘어감
+            this.navCtrl.push(Page9Page, {storename: content});
+          }, 600);
+        });
+    
+        google.maps.event.addListener(marker, 'click', () => {
+          infoWindow.open(this.map, marker);
+        });
+    
+      }
+    
+      addCenterMarker() {
+        let index = null;
+        var image = 'https://lh6.googleusercontent.com/6FEX2UWkE89jTqjYZDNnV1-tTHT5PGlpFTE4-a_-XQVo_7x0HS0Z-6mloUenlbLSPK9qg5X3XxXEBK3p4-XK=w1920-h917';
+        let marker = new google.maps.Marker({
+          map: this.map,
+          animation: google.maps.Animation.DROP,
+          position: this.map.getCenter(),
+          icon: image 
+        });
+    
+        let content = "<h4>하나로마트</h4>";
+    
+        this.addInfoWindow(marker, content, index);
+      }
+    
+      addMarker(lat, lng, content, index){
+        var image = 'https://lh5.googleusercontent.com/Yk8Usoj1FPzbi_2lmrWktlTNPvGQjj7v9Sp8AFKiJMiK-wt8k9LP_RcPOzM-yZUop5S7TyjR3N1cwY1Tp-jt=w1920-h917';
+        let marker = new google.maps.Marker({
+          map: this.map,
+          animation: google.maps.Animation.DROP,
+          position: {
+            lat: lat,
+            lng: lng
+          },
+          icon: image
+        });
+    
+        this.addInfoWindow(marker, content, index);
+      }
     }
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-  }
-
-  addInfoWindow(marker, content, index) {
-    var content1 = '<h4>'+content+'</h4>';
-    let infoWindow = new google.maps.InfoWindow({
-      content: content1
-    });
-
-
-
-    google.maps.event.addListener(marker, 'click', () => {
-      infoWindow.open(this.map, marker);
-    });
-
-  }
-
-  addCenterMarker() {
-    let index = null;
-    var image = 'https://lh6.googleusercontent.com/6FEX2UWkE89jTqjYZDNnV1-tTHT5PGlpFTE4-a_-XQVo_7x0HS0Z-6mloUenlbLSPK9qg5X3XxXEBK3p4-XK=w1920-h917';
-    let marker = new google.maps.Marker({
-      map: this.map,
-      animation: google.maps.Animation.DROP,
-      position: this.map.getCenter(),
-      icon: image 
-    });
-
-    let content = "<h4>하나로</h4>";
-
-    this.addInfoWindow(marker, content, index);
-  }
-
-  addMarker(lat, lng, content, index){
-    var image = 'https://lh5.googleusercontent.com/Yk8Usoj1FPzbi_2lmrWktlTNPvGQjj7v9Sp8AFKiJMiK-wt8k9LP_RcPOzM-yZUop5S7TyjR3N1cwY1Tp-jt=w1920-h917';
-    let marker = new google.maps.Marker({
-      map: this.map,
-      animation: google.maps.Animation.DROP,
-      position: {
-        lat: lat,
-        lng: lng
-      },
-      icon: image
-    });
-
-    google.maps.event.addListener(marker, 'dblclick', () => {
-
-        this.navCtrl.push(Page9Page, {storename: content});
-  
-    });
-
-    this.addInfoWindow(marker, content, index);
-  }
-}
