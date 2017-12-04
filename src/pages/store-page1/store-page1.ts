@@ -7,7 +7,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class StorePage1Page {
 
+  storeName: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.storeName = navParams.get('storeName');
+    console.log(this.storeName);
   }
 
   ionViewDidLoad() {
