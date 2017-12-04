@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+
 @Component({
-  selector: 'page-store-page1',
-  templateUrl: 'store-page1.html',
+  selector: 'page-store-page18',
+  templateUrl: 'store-page18.html',
 })
-export class StorePage1Page {
+export class StorePage18Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StorePage1Page');
+    console.log('ionViewDidLoad StorePage18Page');
   }
 
 }
