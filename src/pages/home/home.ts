@@ -108,23 +108,23 @@ export class HomePage {
       this.addMarker(36.0805071, 129.394598, "<h4>9월애</h4>", StorePage9Page);  //9월애
       this.addMarker(36.0841261, 129.3974612, "<h4>교동짬뽕</h4>", StorePage9Page); //교동짬뽕
       this.addMarker(36.0787765, 129.4017, "<h4>구이촌</h4>", StorePage9Page);   //구이촌
-      this.addMarker(36.0821756, 129.401773, "<h4>국수나무</h4>", 4);  //국수나무
-      this.addMarker(36.0810292, 129.3966427, "<h4>궁물촌</h4>", 5); //궁물촌
-      this.addMarker(36.0815812, 129.3960486, "<h4>논스탠다드</h4>", 6); //논스탠다드
-      this.addMarker(36.0805828, 129.4001778, "<h4>대원 도토리 수제비</h4>", 7); //대원 도토리 수제비
-      this.addMarker(36.0800696, 129.3978667, "<h4>라라코스트</h4>", 8); //라라코스트
+      this.addMarker(36.0821756, 129.401773, "<h4>국수나무</h4>", StorePage9Page);  //국수나무
+      this.addMarker(36.0810292, 129.3966427, "<h4>궁물촌</h4>", StorePage9Page); //궁물촌
+      this.addMarker(36.0815812, 129.3960486, "<h4>논스탠다드</h4>", StorePage9Page); //논스탠다드
+      this.addMarker(36.0805828, 129.4001778, "<h4>대원 도토리 수제비</h4>", StorePage9Page); //대원 도토리 수제비
+      this.addMarker(36.0800696, 129.3978667, "<h4>라라코스트</h4>", StorePage9Page); //라라코스트
       this.addMarker(36.079668, 129.3972152, "<h4>서가앤쿡</h4>", StorePage9Page);  //서가앤쿡
-      this.addMarker(36.0812453, 129.4017762, "<h4>시골국밥</h4>", 10); //시골국밥
-      this.addMarker(36.0859756, 129.3970781, "<h4>용강국밥</h4>", 11); //용강국밥
-      this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", 12); //이동근 선산곱창 막창
-      this.addMarker(36.081606, 129.3992085, "<h4>전주명가 콩나물국밥</h4>", 13);  //전주명가 콩나물국밥
-      this.addMarker(36.08097, 129.3975353, "<h4>정용중화</h4>", 14);   //정용중화
-      this.addMarker(36.0819914, 129.3959307, "<h4>쿠킹빌리지 양식당</h4>", 15); //쿠킹빌리지 양식당
-      this.addMarker(36.0836295, 129.3970606, "<h4>팔선</h4>", 16); //팔선
-      this.addMarker(36.0802828, 129.4017585, "<h4>한양곱창전골</h4>", 17); //한양곱창전골
-      this.addMarker(36.0856341, 129.3970144, "<h4>할매국밥</h4>", 18); //할매국밥
-      this.addMarker(36.0834491, 129.3892483, "<h4>호원</h4>", 19); //호원
-      this.addMarker(36.0767831, 129.3966629, "<h4>홍콩반점</h4>", 20); //홍콩반점
+      this.addMarker(36.0812453, 129.4017762, "<h4>시골국밥</h4>", StorePage9Page); //시골국밥
+      this.addMarker(36.0859756, 129.3970781, "<h4>용강국밥</h4>", StorePage9Page); //용강국밥
+      this.addMarker(36.0805675, 129.3998909, "<h4>이동근 선산곱창 막창</h4>", StorePage9Page); //이동근 선산곱창 막창
+      this.addMarker(36.081606, 129.3992085, "<h4>전주명가 콩나물국밥</h4>", StorePage9Page);  //전주명가 콩나물국밥
+      this.addMarker(36.08097, 129.3975353, "<h4>정용중화</h4>", StorePage9Page);   //정용중화
+      this.addMarker(36.0819914, 129.3959307, "<h4>쿠킹빌리지 양식당</h4>", StorePage9Page); //쿠킹빌리지 양식당
+      this.addMarker(36.0836295, 129.3970606, "<h4>팔선</h4>", StorePage9Page); //팔선
+      this.addMarker(36.0802828, 129.4017585, "<h4>한양곱창전골</h4>", StorePage9Page); //한양곱창전골
+      this.addMarker(36.0856341, 129.3970144, "<h4>할매국밥</h4>", StorePage9Page); //할매국밥
+      this.addMarker(36.0834491, 129.3892483, "<h4>호원</h4>", StorePage9Page); //호원
+      this.addMarker(36.0767831, 129.3966629, "<h4>홍콩반점</h4>", StorePage9Page); //홍콩반점
 
     }, (err) => {
       console.log(err);
@@ -146,25 +146,11 @@ export class HomePage {
 
     let content = name;
 
-    this.addInfoWindow_Store(marker, content, store);
-  }
-
-
-
-  addInfoWindow_Store(marker, content, store) {
-
-    let infoWindow = new google.maps.InfoWindow({
-      content: content
-    });
-
     google.maps.event.addListener(marker, 'dblclick', () => {
-      console.log("Double Clicked!")
       this.navCtrl.push(store);
     });
 
-    google.maps.event.addListener(marker, 'click', () => {
-      infoWindow.open(this.map, marker);
-    });
+    this.addInfoWindow(marker, content);
   }
 
   addInfoWindow(marker, content) {

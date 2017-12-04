@@ -43,6 +43,7 @@ import {
   GoogleMaps,
 } from '@ionic-native/google-maps';
 import { StorePage1Page } from '../pages/store-page1/store-page1';
+import { StorePage9Page } from '../pages/store-page9/store-page9';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBWKarN0Qk3ymtAZjBcrUDX76YOjh3KdVs",
@@ -85,7 +86,8 @@ var firebaseConfig = {
     Stat3Page,
     Stat4Page,
     Stat5Page,
-    StorePage1Page
+    StorePage1Page,
+    StorePage9Page
   ],
   imports: [
     BrowserModule,
@@ -116,7 +118,8 @@ var firebaseConfig = {
     Stat3Page,
     Stat4Page,
     Stat5Page,
-    StorePage1Page
+    StorePage1Page,
+    StorePage9Page
   ],
   providers: [
     Geolocation,
@@ -126,7 +129,6 @@ var firebaseConfig = {
     Facebook,
     AuthProvider,
     GoogleMaps,
-
   ]
 })
 export class AppModule { }
