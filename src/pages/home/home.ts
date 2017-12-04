@@ -92,6 +92,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     this.loadMap();
+    
   }
 
   loadMap() {
