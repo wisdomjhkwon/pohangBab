@@ -26,7 +26,7 @@ import { StationListPage } from '../pages/station-list/station-list';
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
   
-  rootPage: any = HomePage;
+  rootPage: any = Page9Page;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public reviewData: ReviewData, private auth: AngularFireAuth) {
       
