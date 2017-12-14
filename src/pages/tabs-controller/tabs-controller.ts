@@ -12,6 +12,7 @@ export class TabsControllerPage {
   tab1Root: any = HomePage;
   tab2Root: any = BusMapPage;
   constructor(public navCtrl: NavController) {
+    console.log("hihi");
   }
   
 }
